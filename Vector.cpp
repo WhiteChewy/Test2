@@ -89,25 +89,3 @@ public:
 
 
 };
-
-int main() {
-	int c = 0;
-	Queue Buffer(10);
-	setlocale(LC_ALL, "Russian");
-	cout << "========= Проверка буфера ==========";
-	
-	for (int i = 0; i < 10; i++) {
-		Buffer.enqueue(i+1);
-	}
-	for (int i = 0; i < 3; i++) {
-			cout << "\n Удаляю элемент [" << i+1 << "] " << Buffer.first();
-			Buffer.dequeue();
-	}
-	for (int i = 0; i < 10; i++) {
-		cout << "\nЭлемент [" << i + 1 << "] " << Buffer.first();
-		cout << "\nЭлемент [" << i + 1 << "] " << Buffer.first();
-		Buffer.dequeue();
-	}
-	if (Buffer.isEmpty()) { cout << "\nБуффер пуст!"; }
-	return 0;
-}
