@@ -78,4 +78,15 @@ public:
 		return top->data;
 	}
 
+	//Отчистка буфера
+	void clear() {
+		while (!this->isEmpty()) {
+			this->dequeue();
+		}
+	}
+
+	~Queue() {
+		cout << "Буфер удален.";
+	}
+
 };
